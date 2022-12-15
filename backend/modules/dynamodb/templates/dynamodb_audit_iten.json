@@ -1,0 +1,20 @@
+{
+  "id": {
+    "S": "00ab000a-0000-000a-00a0-0a0000a000a0"
+  },
+  "created_at": {
+    "S": "00:00:00 de 00/00/0000"
+  },
+  "customer_cnpj": {
+    "S": "00000000000000"
+  },
+  "description": {
+    "S": "description"
+  },
+  "title": {
+    "S": "title of action"
+  },
+  "username": {
+    "S": "basic.basic"
+  }
+}

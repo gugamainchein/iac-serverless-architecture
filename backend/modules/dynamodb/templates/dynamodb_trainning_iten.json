@@ -1,0 +1,49 @@
+{
+  "id": {
+    "S": "0a00ab00-0abc-0ab0-abc0-000ab00a0ab0"
+  },
+  "created_at": {
+    "S": "00:00:00 at 00/00/0000"
+  },
+  "customer_cnpj": {
+    "S": "00.000.000/0000-00"
+  },
+  "description": {
+    "S": "municipio, decreto, hipótese e imposto"
+  },
+  "keywords": {
+    "L": [
+      {
+        "M": {
+          "value": {
+            "S": "município"
+          }
+        }
+      },
+      {
+        "M": {
+          "value": {
+            "S": "decreto"
+          }
+        }
+      },
+      {
+        "M": {
+          "value": {
+            "S": "hipótese"
+          }
+        }
+      },
+      {
+        "M": {
+          "value": {
+            "S": "imposto"
+          }
+        }
+      }
+    ]
+  },
+  "name": {
+    "S": "municipio, decreto, hipótese e imposto"
+  }
+}

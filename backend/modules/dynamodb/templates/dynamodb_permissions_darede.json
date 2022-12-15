@@ -1,0 +1,258 @@
+{
+  "id": {
+    "S": "${goup_name}"
+  },
+  "created_at": {
+    "S": "${time}"
+  },
+  "customer_cnpj": {
+    "S": "${cnpj}"
+  },
+  "description": {
+    "S": "Permissão para administradores do cliente Darede"
+  },
+  "groupPermissions": {
+    "L": [
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "Documents"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Documents"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "Documents"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "Documents"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "Training"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Training"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "Training"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "Training"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "Audit"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Audit"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "Audit"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "Audit"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "User"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "User"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "User"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "User"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "Permissions"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Permissions"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "Permissions"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "Permissions"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "create"
+          },
+          "subject": {
+            "S": "Clients"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Clients"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "update"
+          },
+          "subject": {
+            "S": "Clients"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "delete"
+          },
+          "subject": {
+            "S": "Clients"
+          }
+        }
+      }
+    ]
+  }
+}

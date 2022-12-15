@@ -1,0 +1,68 @@
+{
+  "id": {
+    "S": "Normal"
+  },
+  "created_at": {
+    "S": "00:00 de 00/00/0000"
+  },
+  "customer_cnpj": {
+    "S": "S/ CNPJ"
+  },
+  "description": {
+    "S": "Permissão básica."
+  },
+  "groupPermissions": {
+    "L": [
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Documents"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Training"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Audit"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "User"
+          }
+        }
+      },
+      {
+        "M": {
+          "action": {
+            "S": "read"
+          },
+          "subject": {
+            "S": "Permissions"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "FullAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "${role_codebuild}"
+      },
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "${s3_arn}",
+        "${s3_arn}/*"
+      ]
+    }
+  ]
+}

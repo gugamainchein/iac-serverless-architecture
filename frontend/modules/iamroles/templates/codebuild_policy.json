@@ -1,0 +1,10 @@
+{
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "*",
+      "Resource": "*"
+    }
+  ],
+  "Version": "2012-10-17"
+}

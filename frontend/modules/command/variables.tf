@@ -1,0 +1,1 @@
+variable "cloudfront_id" {}

@@ -1,0 +1,23 @@
+{
+  "id": {
+    "S": "00ab000a-0000-000a-00a0-0a0000a000a0"
+  },
+  "customer_cnpj": {
+    "S": "00000000000000"
+  },
+  "documentType": {
+    "S": "pdf"
+  },
+  "document_created_at": {
+    "S": "00:00:00 de 00/00/0000"
+  },
+  "output_created_at": {
+    "S": "00:00:00 de 00/00/0000"
+  },
+  "text_created_at": {
+    "S": "00:00:00 de 00/00/0000"
+  },
+  "title": {
+    "S": "titulo"
+  }
+}
