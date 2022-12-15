@@ -89,7 +89,7 @@ Veja a arquitetura abaixo para esclarecer as conexões entre os recursos:
 
 Como você deve saber, os recursos AWS cobram por utilização e é importante trazermos essa visão de custo envolvido na arquitetura apresentada, pois esse tema pode tornar-se um fator de tomada de decisão da viabilidade técnica e de negócio da aplicação.
 
-- Norte Virgínia: $ 7.80 / mês
+- Norte Virgínia: $ 6.00 / mês
 
 O calculo foi feito pelo infracost, você pode encontrar [clicando aqui][infracost_calc_front]
 
@@ -97,7 +97,7 @@ O calculo foi feito pelo infracost, você pode encontrar [clicando aqui][infraco
 
 Como você deve saber, os recursos AWS cobram por utilização e é importante trazermos essa visão de custo envolvido na arquitetura apresentada, pois esse tema pode tornar-se um fator de tomada de decisão da viabilidade técnica e de negócio da aplicação.
 
-- Norte Virgínia: $ 6.00 / mês
+- Norte Virgínia: $ 7.80 / mês
 
 O calculo foi feito pelo infracost, você pode encontrar [clicando aqui][infracost_calc_back]
 
