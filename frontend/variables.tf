@@ -32,6 +32,14 @@ variable "stage" {
   description = "file stage"
 }
 
+# is required
+
+variable "project" {
+  type        = string
+  default     = ""
+  description = "Name of the company to which the project is"
+}
+
 variable "global_model" {
   type        = list(any)
   description = "APP Global Model"
@@ -40,14 +48,6 @@ variable "global_model" {
     "hml",
     "prod"
   ]
-}
-
-# is required
-
-variable "project" {
-  type        = string
-  default     = ""
-  description = "Which part of the project means frontend or backend"
 }
 
 variable "app_name" {
