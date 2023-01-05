@@ -6,7 +6,7 @@ echo "Planning changes and applying to backend infrastructure"
 cd backend/ 
 
 # terraform init -upgrade && terraform fmt && terraform plan
-#  terraform apply -auto-approve
+# terraform apply -auto-approve
 
 cd - 
 
@@ -31,6 +31,6 @@ fi
 # echo "owner = \"${ownerf}\" #\nstage = \"${stagef}\" #\nproject = \"${projectf}\" #\n" >> terraform.tfvars
 
 # terraform init -upgrade && terraform fmt && terraform plan
-#  terraform apply -auto-approve
+# terraform apply -auto-approve
 
 cd -

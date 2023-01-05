@@ -1,23 +1,20 @@
 # Iac Serverless Architecture
 
-<!--
-Pensando nisso, desenvolvemos uma aplicação voltada para utilização do superset do Javascript, o Typescript, aliado com o framework para deploys de recursos serverless na AWS, o famoso Serverless Framework. -->
+Automatizar infraestruturas é um desafio gigante, principalmente quando falamos de arquiteturas AWS Serverless. Neste cenário, cada detalhe passa a ser importante, em decorrência da importância dos detalhes nas configurações dos recursos serverless.
+
+Pensando nos desafios das configurações sendo realizadas de forma manual, como o alto tempo de configuração e altas chances de erro, construímos esse repositório para que você possa automatizar suas infraestruturas AWS Serverless e preocupar-se somente com seu código.
 
 ## Arquitetura do projeto - Frontend
 
 Os principais recursos que irão nos apoiar na configuração de nossa aplicação são:
 
-- Terraform:
-
-  - Responsável pela criação / atualização de toda a infraestrutura necessária para o projeto, por meio de código.
-
 - S3:
 
-  - Armazenamento dos arquivos do frontend.
+  - Armazenamento dos arquivos estáticos do frontend.
 
 - WAF:
 
-  - Firewall para a aplicação, assim controlando as requisições no Cloudfront.
+  - Firewall da aplicação, controlando as requisições e formatações delas no Cloudfront.
 
 - Codecommit:
 
@@ -25,10 +22,11 @@ Os principais recursos que irão nos apoiar na configuração de nossa aplicaç�
 
 - Codebuild:
 
-  - Será a ferramenta que vai baixar os pacotes para a aplicação e fará o build dela.
+  - Ferramenta utilizada para download dos pacotes da aplicação, além de execução dos comandos de testes e build.
 
 - Codepipeline:
-  - Ferramenta da AWS que automatiza o processo de build e deploy com uma esteira.
+
+  - Recurso AWS responsável por automatizar o processo de build e deploy, por meio do gerenciamento via esteira.
 
 Veja a arquitetura abaixo para esclarecer as conexões entre os recursos:
 
@@ -38,17 +36,13 @@ Veja a arquitetura abaixo para esclarecer as conexões entre os recursos:
 
 Os principais recursos que irão nos apoiar na configuração de nossa aplicação são:
 
-- Terraform:
-
-  - Responsável pela criação / atualização de toda a infraestrutura necessária para o projeto, por meio de código.
-
 - S3:
 
-  - Armazenamento dos logs da pipeline, cache do serverless framework e mais dois para a interação com a aplicação.
+  - Armazenamento dos logs da pipeline e cache do Serverless Framework.
 
 - DynamoDB:
 
-  - Banco de dados NoSQL para armazenamento dos dados da API.
+  - Banco de dados NoSQL, utilizado para armazenamento dos dados da API.
 
 - Lambda:
 
@@ -60,11 +54,11 @@ Os principais recursos que irão nos apoiar na configuração de nossa aplicaç�
 
 - WAF:
 
-  - Firewall para a aplicação, assim controlando as requisições do API Gateway.
+  - Firewall da aplicação, controlando as requisições e formatações delas do API Gateway.
 
 - Cognito:
 
-  - Vai fornecer gerenciamento de usuários para à aplicação.
+  - Serviço responsável por fornecer a camada de federação de usuários da aplicação.
 
 - Codecommit:
 
@@ -72,14 +66,15 @@ Os principais recursos que irão nos apoiar na configuração de nossa aplicaç�
 
 - Codebuild:
 
-  - Será a ferramenta que vai baixar os pacotes para a aplicação e fará o build dela.
+  - Ferramenta utilizada para download dos pacotes da aplicação, além de execução dos comandos de testes e build.
 
 - Codepipeline:
 
-  - Ferramenta da AWS que automatiza o processo de build e deploy com uma esteira.
+  - Recurso AWS responsável por automatizar o processo de build e deploy, por meio do gerenciamento via esteira.
 
 - Secrets Manager:
-  - Ferramenta da AWS que cria um secrets. Como se fosse um arquivo .env da aplicação.
+
+  - Serviço AWS que é responsável por armazenar as chaves sensíveis da aplicação.
 
 Veja a arquitetura abaixo para esclarecer as conexões entre os recursos:
 
@@ -124,7 +119,7 @@ Executando o projeto:
 sudo sh scripts/apply.sh
 ```
 
-## Variáveis de ambiente
+<!-- ## Variáveis de ambiente -->
 
 <!-- Após as realizações dos passos acima e a inicialização do projeto com sucesso, você está pronto para integrá-lo com os recursos de sua conta AWS, por meio das variáveis de ambiente abaixo:
 
@@ -136,7 +131,7 @@ sudo sh scripts/apply.sh
 
 - AUTH_HEADER: JWT de sua preferência para validação na autorização. -->
 
-## Sobre o projeto
+<!-- ## Sobre o projeto -->
 
 <!-- O back-end deste repositório, tem como propósito a realização do CRU (Create, Read e Update) de clientes no banco de dados. Pensando nisso, abordaremos nos tópicos abaixo como o projeto está estruturado.
 
@@ -165,9 +160,10 @@ sudo sh scripts/apply.sh
 - 0.1.0
   - Primeira versão da aplicação
 
-## Sobre o criador
+## Sobre os criadores
 
-Desenvolvedores Dosystems – [DAREDE SERVICOS DE TI LTDA](https://www.darede.com.br/) – [dev@dosystems.com.br][email]
+Gustavo Mainchein - [@gugamainchein](https://www.instagram.com/gugamainchein) – gustavomainchein@outlook.com
+Raul Soares - [@r4ulrs](https://www.instagram.com/r4ulrs/) - raulsoares@outlook.com
 
 ## Faça sua contribuição
 
@@ -179,8 +175,8 @@ Desenvolvedores Dosystems – [DAREDE SERVICOS DE TI LTDA](https://www.darede.co
 
 <!-- Start Functions -->
 
-[architecture_front]: ./docs/architecture/architecture_front.png
-[architecture_back]: ./docs/architecture/architecture_back.png
+[architecture_front]: ./docs/architecture/github-front-end-arch-tf-v1.png
+[architecture_back]: ./docs/architecture/github-back-end-arch-tf-v1.png
 [email]: mailto:dev@dosystems.com.br?subject=Gostaria%20de%20solicitar%20um%20orçamento.
 [npm_image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [infracost_calc_front]: ./docs/infracost/calc_front.txt
