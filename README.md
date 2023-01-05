@@ -1,4 +1,4 @@
-# Iac Serverless Architecture
+# IaC Serverless Architecture
 
 Automatizar infraestruturas é um desafio gigante, principalmente quando falamos de arquiteturas AWS Serverless. Neste cenário, cada detalhe passa a ser importante, em decorrência da importância dos detalhes nas configurações dos recursos serverless.
 
@@ -162,8 +162,8 @@ sudo sh scripts/apply.sh
 
 ## Sobre os criadores
 
-Gustavo Mainchein - [@gugamainchein](https://www.instagram.com/gugamainchein) – gustavomainchein@outlook.com
-Raul Soares - [@r4ulrs](https://www.instagram.com/r4ulrs/) - raulsoares@outlook.com
+- Gustavo Mainchein - [@gugamainchein](https://www.instagram.com/gugamainchein) – gustavomainchein@outlook.com
+- Raul Soares - [@r4ulrs](https://www.instagram.com/r4ulrs/) - raulsoares@outlook.com
 
 ## Faça sua contribuição
 
