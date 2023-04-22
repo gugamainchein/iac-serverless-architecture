@@ -1,6 +1,6 @@
 variable "accont_id" {
   type        = string
-  default     = ""
+  default     = "194776475217"
   description = "AWS Account Id"
 }
 
@@ -12,31 +12,25 @@ variable "region_aws" {
 
 variable "profile_aws" {
   type        = string
-  default     = ""
+  default     = "default"
   description = "Machine User Name that will access aws"
 }
 
-# is required
-
 variable "owner" {
   type        = string
-  default     = ""
+  default     = "gustavo.mainchein"
   description = "owner of changes"
 }
 
-# is required
-
 variable "stage" {
   type        = string
-  default     = ""
+  default     = "dev"
   description = "file stage"
 }
 
-# is required
-
 variable "project" {
   type        = string
-  default     = ""
+  default     = "rodobens-front-end"
   description = "Name of the company to which the project is"
 }
 

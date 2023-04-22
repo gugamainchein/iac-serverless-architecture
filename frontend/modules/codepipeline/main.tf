@@ -1,5 +1,5 @@
 resource "aws_codepipeline" "codepipeline" {
-  name     = "${var.global_model}-${var.global_stage}-${var.project}-${var.pipeline_name}-${var.global_app_name}"
+  name     = "${var.global_stage}-${var.project}-${var.pipeline_name}-${var.global_app_name}"
   role_arn = var.codepipeline_role
 
   artifact_store {
@@ -20,7 +20,7 @@ resource "aws_codepipeline" "codepipeline" {
 
       configuration = {
         RepositoryName = var.repo_name
-        BranchName     = var.global_model
+        BranchName     = var.global_stage
       }
     }
   }

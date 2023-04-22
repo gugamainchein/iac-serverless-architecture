@@ -13,5 +13,3 @@ variable "codebuild_policy_name" {}
 variable "project" {}
 
 variable "global_app_name" {}
-
-variable "global_model" {}

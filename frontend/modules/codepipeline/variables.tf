@@ -15,5 +15,3 @@ variable "nome_codebuild" {}
 variable "global_app_name" {}
 
 variable "project" {}
-
-variable "global_model" {}

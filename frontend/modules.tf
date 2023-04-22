@@ -1,7 +1,6 @@
 module "bucket" {
   source = "./modules/bucket"
 
-  global_model             = var.global_model[0]
   global_stage             = var.stage
   global_app_name          = var.app_name
   codepipeline_bucket_name = var.codepipeline_bucket_name
@@ -30,31 +29,18 @@ module "cloudfront" {
 module "codebuild" {
   source = "./modules/codebuild"
 
-  global_model                      = var.global_model[0]
-  codebuild_project_name            = var.codebuild_project_name
-  global_stage                      = var.stage
-  project                           = var.project
-  owner                             = var.owner
-  global_app_name                   = var.app_name
-  react_app_identity_pool_id        = var.react_app_identity_pool_id
-  react_app_user_pool_id            = var.react_app_user_pool_id
-  react_app_user_pool_web_client_id = var.react_app_user_pool_web_client_id
-  react_app_cognito_domain          = var.react_app_cognito_domain
-  react_app_aws_api_gateway_url     = var.react_app_aws_api_gateway_url
-  react_app_aws_api_gateway_name    = var.react_app_aws_api_gateway_name
-  react_app_waf_token               = var.react_app_waf_token
-  react_app_aws_region              = var.region_aws
-  react_app_web_client_redirect_url = var.react_app_web_client_redirect_url
-  react_app_stage                   = var.global_model[0]
-  react_app_cnpj_endpoint           = var.react_app_cnpj_endpoint
-  codebuild_role                    = module.iam.codebuild_role
-  clone_ssh                         = module.codecommit.clone_ssh
+  codebuild_project_name = var.codebuild_project_name
+  global_stage           = var.stage
+  project                = var.project
+  owner                  = var.owner
+  global_app_name        = var.app_name
+  codebuild_role         = module.iam.codebuild_role
+  clone_ssh              = module.codecommit.clone_ssh
 }
 
 module "codepipeline" {
   source = "./modules/codepipeline"
 
-  global_model           = var.global_model[0]
   global_stage           = var.stage
   repo_name              = module.codecommit.repo_name
   pipeline_name          = var.pipeline_name
@@ -76,7 +62,6 @@ module "codepipeline" {
 module "iam" {
   source = "./modules/iamroles"
 
-  global_model             = var.global_model[0]
   global_stage             = var.stage
   codepipeline_bucket_arn  = module.bucket.s3_arn
   codepipeline_role_name   = var.codepipeline_role_name
@@ -94,7 +79,6 @@ module "iam" {
 module "waf" {
   source = "./modules/waf"
 
-  global_model           = var.global_model[0]
   global_stage           = var.stage
   global_app_name        = var.app_name
   waf_description        = var.waf_description
@@ -118,6 +102,11 @@ module "commands" {
   source = "./modules/command"
 
   cloudfront_id = module.cloudfront.cloudfront_id
+
+  global_app_name = var.app_name
+  project         = var.project
+  global_stage    = var.stage
+  profile_aws     = var.profile_aws
 
   depends_on = [
     module.bucket,

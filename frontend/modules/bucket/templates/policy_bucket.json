@@ -1,20 +1,14 @@
 {
   "Version": "2008-10-17",
-  "Id": "PolicyForCloudFrontPrivateContent",
   "Statement": [
     {
       "Sid": "AllowCloudFrontServicePrincipal",
       "Effect": "Allow",
       "Principal": {
-        "Service": "cloudfront.amazonaws.com"
+        "AWS": "${cf_origin_arn}"
       },
       "Action": "s3:GetObject",
-      "Resource": "${s3_arn}/*",
-      "Condition": {
-        "StringEquals": {
-          "AWS:SourceArn": "${cf_origin_arn}"
-        }
-      }
+      "Resource": "${s3_arn}/*"
     }
   ]
 }

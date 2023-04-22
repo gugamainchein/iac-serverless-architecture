@@ -1,7 +1,7 @@
 locals {
   allowList = aws_wafv2_ip_set.whitelist_cf_ipv4.arn
-  whitelist = "${var.global_model}-${var.project}-${var.aws_wafv2_ip_set_name}-api-ipv4"
-  prefix    = "${var.global_model}-${var.global_stage}-${var.project}-${var.aws_wafv2_web_acl_name}-${var.global_app_name}"
+  whitelist = "${var.project}-${var.aws_wafv2_ip_set_name}-api-ipv4"
+  prefix    = "${var.global_stage}-${var.project}-${var.aws_wafv2_web_acl_name}-${var.global_app_name}"
 }
 
 resource "aws_wafv2_web_acl" "waf_cf" {
@@ -29,7 +29,7 @@ resource "aws_wafv2_web_acl" "waf_cf" {
 
     visibility_config {
       cloudwatch_metrics_enabled = true
-      metric_name                = "metric-${var.global_model}-${var.role_waf}"
+      metric_name                = "metric-${var.role_waf}"
       sampled_requests_enabled   = true
     }
   }

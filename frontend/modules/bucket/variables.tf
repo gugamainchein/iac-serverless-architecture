@@ -10,6 +10,4 @@ variable "depends_cf_origin" {}
 
 variable "cf_origin_arn" {}
 
-variable "global_model" {}
-
 variable "project" {}

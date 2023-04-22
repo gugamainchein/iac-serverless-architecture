@@ -13,5 +13,3 @@ variable "role_waf" {}
 variable "aws_wafv2_ip_set_name" {}
 
 variable "ipsAlloweds" {}
-
-variable "global_model" {}
