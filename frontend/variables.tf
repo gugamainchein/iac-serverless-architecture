@@ -12,7 +12,7 @@ variable "region_aws" {
 
 variable "profile_aws" {
   type        = string
-  default     = "default"
+  default     = "rodobens-lab"
   description = "Machine User Name that will access aws"
 }
 
@@ -46,7 +46,7 @@ variable "global_model" {
 
 variable "app_name" {
   type        = string
-  default     = "front-end"
+  default     = "front-end-test"
   description = "Resource Global Name"
 }
 

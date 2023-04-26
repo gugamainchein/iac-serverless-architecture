@@ -2,14 +2,14 @@ resource "aws_s3_bucket" "codepipeline-bucket" {
   bucket = "${var.global_stage}-${var.project}-${var.codepipeline_bucket_name}-${var.global_app_name}"
 }
 
-resource "aws_s3_bucket_acl" "codepipeline-bucket-acl" {
-  bucket = aws_s3_bucket.codepipeline-bucket.id
-  acl    = "private"
+# resource "aws_s3_bucket_acl" "codepipeline-bucket-acl" {
+#   bucket = aws_s3_bucket.codepipeline-bucket.id
+#   acl    = "private"
 
-  depends_on = [
-    aws_s3_bucket.codepipeline-bucket
-  ]
-}
+#   depends_on = [
+#     aws_s3_bucket.codepipeline-bucket
+#   ]
+# }
 
 resource "aws_s3_bucket_public_access_block" "codepipeline-block-public" {
   bucket = aws_s3_bucket.codepipeline-bucket.id
