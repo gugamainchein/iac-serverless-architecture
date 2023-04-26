@@ -224,10 +224,7 @@ variable "ipsAlloweds" {
   type = list(any)
   default = [
     "54.232.26.136/32",
-    "52.21.32.34/32",
-    "186.192.143.189/32",
-    "187.90.192.238/32",
-    "200.170.208.10/32"
+    "186.225.142.251/32"
   ]
   description = "IP's that will be allowed"
 }
